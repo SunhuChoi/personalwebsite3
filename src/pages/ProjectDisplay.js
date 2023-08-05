@@ -9,7 +9,7 @@ export const ProjectDisplay = () => {
   return (
     <div className="project">
       <h1>{project.name}</h1>
-      <img src={project.image}></img>
+      <img src={project.image}/>
       <p>
         <b>Skills</b>
       </p>
