@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { BiLogoGithub } from "react-icons/bi";
 import { BiLogoLinkedinSquare } from "react-icons/bi";
 import { BiLogoGmail } from "react-icons/bi";
