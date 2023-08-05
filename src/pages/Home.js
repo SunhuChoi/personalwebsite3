@@ -6,50 +6,50 @@ import headerImg from "../assets/mypfp.jpg";
 import "../styles/Home.css";
 
 export const Home = () => {
-  const [loopNum, setLoopNum] = useState(0);
-  const [isDeleting, setisDeleting] = useState(false);
-  const toRotate = ["My name is Sunhu Choi", "Welcome to my Portfolio"];
-  const [text, setText] = useState("");
-  const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const period = 2000;
-  useEffect(() => {
-    let ticker = setInterval(() => {
-      tick();
-    }, delta);
+  // const [loopNum, setLoopNum] = useState(0);
+  // const [isDeleting, setisDeleting] = useState(false);
+  // const toRotate = ["My name is Sunhu Choi", "Welcome to my Portfolio"];
+  // const [text, setText] = useState("");
+  // const [delta, setDelta] = useState(300 - Math.random() * 100);
+  // const period = 2000;
+  // useEffect(() => {
+  //   let ticker = setInterval(() => {
+  //     tick();
+  //   }, delta);
 
-    return () => {
-      clearInterval(ticker);
-    };
-  }, [text]);
+  //   return () => {
+  //     clearInterval(ticker);
+  //   };
+  // }, [text]);
 
-  const tick = () => {
-    let i = loopNum % toRotate.length;
-    let fullText = toRotate[i];
-    let updatedText = isDeleting
-      ? fullText.substring(0, text.length - 1)
-      : fullText.substring(0, text.length + 1);
+  // const tick = () => {
+  //   let i = loopNum % toRotate.length;
+  //   let fullText = toRotate[i];
+  //   let updatedText = isDeleting
+  //     ? fullText.substring(0, text.length - 1)
+  //     : fullText.substring(0, text.length + 1);
 
-    setText(updatedText);
+  //   setText(updatedText);
 
-    if (isDeleting) {
-      setDelta((prevDelta) => prevDelta / 2);
-    }
+  //   if (isDeleting) {
+  //     setDelta((prevDelta) => prevDelta / 2);
+  //   }
 
-    if (!isDeleting && updatedText === fullText) {
-      setisDeleting(true);
-      setDelta(period);
-    } else if (isDeleting && updatedText === "") {
-      setisDeleting(false);
-      setLoopNum(loopNum + 1);
-      setDelta(500);
-    }
-  };
+  //   if (!isDeleting && updatedText === fullText) {
+  //     setisDeleting(true);
+  //     setDelta(period);
+  //   } else if (isDeleting && updatedText === "") {
+  //     setisDeleting(false);
+  //     setLoopNum(loopNum + 1);
+  //     setDelta(500);
+  //   }
+  // };
 
   return (
     <div className="home">
       <div className="about">
-        <img src={headerImg}></img>
-        <h2>{text}</h2>
+        <img src={headerImg} alt="Oh hi"></img>
+        <h2>Hi! My name is Sunhu Choi</h2>
         <div className="prompt">
           <h4>Student at UCSB, aspiring SWE</h4>
           <BiLogoLinkedinSquare
