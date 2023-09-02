@@ -8,15 +8,14 @@ export const ProjectDisplay = () => {
   const project = ProjectList[id];
   return (
     <div className="project">
-      <h1>{project.name}</h1>
       <img src={project.image} alt="temporary"/>
       <p>
         <li className="item">
-          <b>Skills</b>
+          <b>Skills: </b>
           <span>JavaScript, Managing a Raspberry Pi, Git</span>
         </li>
         <li className="item">
-          <b>Description</b>
+          <b>Description: </b>
           <span>
             This smart mirror is a two-way mirror with a display installed in
             the the back
