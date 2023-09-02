@@ -9,9 +9,9 @@ export const ProjectDisplay = () => {
   return (
     <div className="project">
       <h1>{project.name}</h1>
-      <img src={project.image}></img>
+      <img src={project.image alt="temporary"}></img>
       <p>
-        <b>Skills</b>
+        <span>JavaScript, Managing a Raspberry Pi, Git</span>
         <b>Description</b>
       </p>
     </div>
