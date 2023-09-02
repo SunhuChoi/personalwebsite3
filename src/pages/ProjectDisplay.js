@@ -11,9 +11,11 @@ export const ProjectDisplay = () => {
       <h1>{project.name}</h1>
       <img src={project.image} alt="temporary"/>
       <p>
-        <li>
+        <li className="item">
           <b>Skills</b>
           <span>JavaScript, Managing a Raspberry Pi, Git</span>
+        </li>
+        <li className="item">
           <b>Description</b>
           <span>
             This smart mirror is a two-way mirror with a display installed in
